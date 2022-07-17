@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Code Of Duty</title>
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/iletisim.css" />
+  </head>
+  <body>
+    <section class="showcase">
+      <header>
+        <h2 class="logo">Code of Duty</h2>
+        <div class="toggle"></div>
+      </header>
+      <video src="assets/bg.mp4" muted loop autoplay></video>
+      <div class="overlay"></div>
+      <div class="text">
+        <h2>Code of Duty</h2>
+        <h3>İletİşİm</h3>
+        <p>
+          Kulubümüz Siz Değerli Üyelerimiz İçin Aktif Grupları Bulunmaktadır.<br />Aşağıdaki
+          Butonlara Basarak Gruplarımıza Katılabilirsiniz.<br />
+          <a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i>Whatsapp</a>
+          <a href="#"><i class="fa fa-discord" aria-hidden="true"></i> Discord</a>
+        </p>
+      </div>
+      <ul class="social">
+        <li>
+          <a href="http://instagram.com/igucod/" target="_blank"
+            ><img src="assets/instagram.png"
+          /></a>
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/place/%C4%B0STANBUL+GEL%C4%B0%C5%9E%C4%B0M+%C3%9CN%C4%B0VERS%C4%B0TES%C4%B0/@40.9980215,28.6967873,17z/data=!3m1!4b1!4m5!3m4!1s0x14caa0f5088d375d:0xfc55898b29bc7b33!8m2!3d40.9980215!4d28.698976"
+            target="_blank"
+            ><img src="assets/adres.png"
+          /></a>
+        </li>
+        <li>
+          <a href="http://instagram.com/iguybs/" target="_blank"
+            ><img src="assets/instagram.png"
+          /></a>
+        </li>
+      </ul>
+    </section>
+    <div class="menu">
+      <ul>
+        <li><a href="index.html">Anasayfa</a></li>
+        <li><a href="kayit.html">Kayıt ol</a></li>
+        <li><a href="katilimcilar.html">Katılımcılar</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    const menuToggle = document.querySelector(".toggle");
+    const showcase = document.querySelector(".showcase");
+
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("active");
+      showcase.classList.toggle("active");
+    });
+  </script>
+</html>

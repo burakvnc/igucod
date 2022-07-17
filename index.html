@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Code Of Duty</title>
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <section class="showcase">
+      <header>
+        <h2 class="logo">Code of Duty</h2>
+        <div class="toggle"></div>
+      </header>
+      <video src="assets/bg.mp4" muted loop autoplay></video>
+      <div class="overlay"></div>
+      <div class="text">
+        <h2></h2>
+        <h3>Code of Duty</h3>
+        <p>
+          2021 yılında kurulan CODE OF DUTY kulübü, yazılım ve teknolojik gelişmeler
+          başta olmak üzere düzenleyeceğimiz etkinliklerle kendilerini teknik ve
+          teorik açıdan geliştirmelerini, alanımızın uzmanlarından olan onlarca
+          katılımcının katılacağı etkinliğimizi sıfırdan düzenlerken aktif bir
+          şekilde sorumluluk alarak girişimciliğe dair adım atmalarını,
+          networklerini genişletmeyi ve kariyer planlaması yapmalarını
+          kolaylaştırmayı amaçlıyoruz.
+        </p>
+        <a href="kayit.html">Kayıt Ol</a>
+      </div>
+
+    </section>
+    <div class="menu">
+      <ul>
+        <li><a href="index.html">Anasayfa</a></li>
+        <li><a href="kayit.html">Kayıt ol</a></li>
+        <li><a href="katilimcilar.html">Katılımcılar</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    const menuToggle = document.querySelector(".toggle");
+    const showcase = document.querySelector(".showcase");
+
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("active");
+      showcase.classList.toggle("active");
+    });
+  </script>
+</html>

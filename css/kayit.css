@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo
+{
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.toggle
+{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: url(https://i.ibb.co/HrfVRcx/menu.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+}
+.toggle.active
+{
+  background: url(https://i.ibb.co/rt3HybH/close.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+  cursor: pointer;
+}
+.showcase
+{
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:#111;
+  transition: 0.5s;
+  z-index: 2;
+}
+.showcase.active
+{
+  right: 300px;
+}
+
+.showcase video
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+.overlay
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  background:rgba(0, 0, 0, 0.6);
+
+  filter:blur(20px);
+  -o-filter:blur(20px);
+  -ms-filter:blur(20px);
+  -moz-filter:blur(20px);
+  -webkit-filter:blur(20px);
+}
+#wrapper {
+  position: relative;
+  left: 37vw;
+  text-align: center;
+  background: url(https://img.freepik.com/free-vector/white-gray-geometric-pattern-background-vector_53876-136510.jpg);
+  border-radius: 10px;
+}
+#wrapper hr{
+  height: 0;
+}
+#wrapper img {
+  width: 240px;
+  height: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#wrapper form {
+  margin: 84px 0;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(0, 0, 0, 1);
+  opacity: 1; /* Firefox */
+}
+::placeholder:hover { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(255, 255, 255);
+  opacity: 1; /* Firefox */
+}
+::placeholder:focus { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(255, 255, 255);
+  opacity: 1; /* Firefox */
+}
+#inputs {
+  height: 200px;
+  transition: height 0.5s ease-in-out;
+}
+#inputs div {
+  height: 40px;
+  transform-origin: 0 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+#wrapper input {
+  background: rgba(0, 0, 0, 0);
+  border: 0;
+  box-sizing: border-box;
+  display: block;
+  font-weight: 600;
+  font-size: 12px;
+  margin: 0 auto;
+  padding: 13px;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  width: 20vw;
+  transform-origin: 0 0;
+  -webkit-font-smoothing: antialiased;
+}
+#wrapper input:hover {
+  background: #FFFEFC;
+}
+#wrapper input:focus {
+  background: blanchedalmond;
+}
+#wrapper input[type=submit] {
+  background: rgba(0, 0, 0, 0);
+  color: #000;
+  cursor: pointer;
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+#wrapper input[type=submit]:hover {
+  background: #6db96a;
+}
+#wrapper input[type=submit]:focus {
+  background: #59b482;
+}
+#wrapper input[type=radio] {
+  display: none;
+}
+
+input:checked[value=register] ~ #inputs {
+  height: 170px;
+}
+input:checked[value=register] ~ #labels {
+  margin-top: 30px;
+}
+#wrapper input:checked[value=register] ~ #labels label[for=register],
+#wrapper input:checked[value=register] ~ #labels label[for=login]:nth-child(3) {
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+.menu
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu ul
+{
+  position: relative;
+}
+.menu ul li
+{
+  list-style: none;
+}
+.menu ul li a
+{
+  text-decoration: none;
+  font-size: 24px;
+  color: #111;
+}
+.menu ul li a:hover
+{
+  color: #03a9f4; 
+}
+
+@media (max-width: 991px)
+{
+  .showcase,
+  .showcase header
+  {
+    padding: 40px;
+  }
+  .text h2
+  {
+    font-size: 3em;
+  }
+  .text h3
+  {
+    font-size: 2em;
+  }
+}
+@media only screen and (max-width:1201px) and (min-height:800px) {
+  @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+  *
+  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  header
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .logo
+  {
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .toggle
+  {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url(https://i.ibb.co/HrfVRcx/menu.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+  }
+  .toggle.active
+  {
+    background: url(https://i.ibb.co/rt3HybH/close.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+    cursor: pointer;
+  }
+  .showcase
+  {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:#111;
+    transition: 0.5s;
+    z-index: 2;
+  }
+  .showcase.active
+  {
+    right: 300px;
+  }
+  
+  .showcase video
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+  }
+  .overlay
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #03a9f4;
+    mix-blend-mode: overlay;
+  }
+  #wrapper {
+    position: relative;
+    left: 17vw;
+    text-align: center;
+  }
+  
+  #wrapper h1 {
+    color: #426d83;
+    font-size: 83px;
+    margin: 0;
+  }
+  
+  #wrapper h2 {
+    color: #349E97;
+    margin: 0;
+    font-size: 45px;
+  }
+  
+  #wrapper form {
+    margin: 35px 0;
+  }
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(177, 159, 159);
+    opacity: 1; /* Firefox */
+  }
+  #inputs {
+    height: 300px;
+    transition: height 0.5s ease-in-out;
+  }
+  #inputs div {
+    height: 80px;
+    transform-origin: 0 0;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  #wrapper input {
+    background: rgba(0, 0, 0, 0);
+    border: 0;
+    box-sizing: border-box;
+    display: block;
+    font-weight: 500;
+    font-size: 35px;
+    margin: 0 auto;
+    padding: 13px;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    width: 50vw;
+    transform-origin: 0 0;
+    -webkit-font-smoothing: antialiased;
+  }
+  #wrapper input:hover {
+    background: #f3f3f3;
+  }
+  #wrapper input:focus {
+    background: #EAEAEA;
+  }
+  #wrapper input[type=submit] {
+    background: rgba(0, 0, 0, 0);
+    color: #FFFEFC;
+    cursor: pointer;
+  }
+  #wrapper input[type=submit]:hover {
+    background: #6db96a;
+  }
+  #wrapper input[type=submit]:focus {
+    background: #59b482;
+  }
+  #wrapper input[type=radio] {
+    display: none;
+  }
+  
+  input:checked[value=register] ~ #inputs {
+    height: 170px;
+  }
+  input:checked[value=register] ~ #labels {
+    margin-top: 30px;
+  }
+  #wrapper input:checked[value=register] ~ #labels label[for=register],
+  #wrapper input:checked[value=register] ~ #labels label[for=login]:nth-child(3) {
+    transition: opacity 0.5s;
+    opacity: 0;
+  }
+  
+  .menu
+  {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu ul
+  {
+    position: relative;
+  }
+  .menu ul li
+  {
+    list-style: none;
+  }
+  .menu ul li a
+  {
+    text-decoration: none;
+    font-size: 24px;
+    color: #111;
+  }
+  .menu ul li a:hover
+  {
+    color: #03a9f4; 
+  }
+  
+  @media (max-width: 991px)
+  {
+    .showcase,
+    .showcase header
+    {
+      padding: 40px;
+    }
+    .text h2
+    {
+      font-size: 3em;
+    }
+    .text h3
+    {
+      font-size: 2em;
+    }
+  }
+}
